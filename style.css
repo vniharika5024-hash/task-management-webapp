@@ -1,0 +1,144 @@
+
+body {
+    background: #f3f5fa;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1, h2, h3 {
+    color: #222f3e;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+/* navbar styling */
+
+.navbar {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 12px 20px;
+
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Form styling */
+form {
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+    max-width: 500px;
+    margin: auto;
+}
+
+form input,
+form textarea{
+    border-radius: 10px !important;
+    border: 1px solid #dce3ee !important;
+    padding: 12px !important;
+    transition: all 0.2s ease-in-out;
+
+}
+
+form input:focus,
+form textarea:focus{
+    border-color: #0d6efd !important;
+    box-shadow: 0px 0px 8px rgba(13, 110, 253, 0.35);
+}
+
+/* buttons */
+form button,
+.btn {
+    border-radius: 10px !important;
+    font-size: 1rem;
+    padding: 10px 14px;
+    font-weight: 600;
+}
+
+.btn-primary{
+    background: #0d6efd !important;
+    border: naone !important;
+}
+
+.btn-primary:hover{
+    background: #0b5ed7 !important;
+}
+
+.btn-warning{
+    background: #f0ad4e !important;
+    border: none !important;
+}
+
+.btn-warning:hover{
+    background: #ec971f !important;
+}
+
+.btn-danger{
+    background: #dc3545 !important;
+    border: none !important;
+}
+
+.btn-danger:hover{
+    background: #bb2d3b !important;
+
+}
+/*Table*/
+.table {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+.table thead {
+    background: #222f3e;
+    color: white;
+}
+
+.table tr:hover {
+    background: #f2f6ff;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    padding: 12px 16px;
+}
+
+
+
+.dashboard-header {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.12);
+    margin-bottom: 25px;
+}
+
+/* flash messages */
+
+.alert {
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-weight: 500;
+}
+

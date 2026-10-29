@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-item-center mb-4">
+        <h2 class="fw-bold">Your Tasks</h2>
+        <a href="{{ url_for('createtask') }}" class="btn btn-primary shadow-sm px-4">
+            Create your new tasks
+        </a>
+    </div>
+
+    {% if tasks|length == 0 %}
+        <div class="alert alert-info text-center py-4 shadow-sm">
+            <h5 class="mb-0">No tasks yet. Start by adding one!</h5>
+        </div>
+    {% else %}
+        <div class="card shadow-sm">
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0 align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="ps-4">Title</th>
+                            <th>Description</th>
+                            <th class="text-end pe-4">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in tasks %}
+                        <tr>
+                            <td class="ps-4 fw-semibold">{{ task.title }}</td>
+                            <td>{{ task.description }}</td>
+                            <td class="text-end pe-4">
+                                <a href="{{ url_for('updatetask', id=task.id)}}" class="btn btn-sm btn-outline-danger">
+                                    Update
+                                </a>
+
+                                <a href="{{ url_for('deletetask', id=task.id) }}" class="btn btn-sm btn-outline-danger">
+                                    Delete
+                                </a>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+    
+
